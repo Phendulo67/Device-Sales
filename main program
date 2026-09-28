@@ -1,0 +1,103 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.electronics;
+
+/**
+ *
+ * @author Student
+ */
+import java.util.Scanner;
+public class Electronics {
+
+    public static void main(String[] args) {
+        
+        //city names
+        String[] city ={
+"Cape Town",
+"Port Elizabeth",
+"Pretoria",
+};
+// Product categories
+String[] device = {
+"PS5",
+"Xbox",
+"Switch"
+};
+
+//array for sales
+double[][] sales = new double[4][4];
+
+double[] storeTotals = new double[3];
+double[] deviceTotals = new double[3];
+
+for (int i = 0; i < city.length; i++) {
+for (int j = 0; i < device.length; j++) {
+    
+    System.out.print("Enter"+device[i]+ "sales for"+ city[i]+ " ");
+
+sales[i][j] = input.nextDouble();
+                
+
+//city totals
+    for (int j = 0; j < device.length; j++) {
+double total = 0;
+for (int i = 0; i < city.length; i++) {
+total = total + sales[i][j];
+}
+deviceTotals[j] = total;
+}
+//grand total
+double grandTotal = 0;
+for (int i = 0; i < cityTotals.length; i++) {
+grandTotal = grandTotal + storeTotals[i];
+}
+//highest
+int highestStoreIndex = 0;
+for (int i = 1; i < storeTotals.length; i++) {
+if (storeTotals[i] > storeTotals[highestStoreIndex]) {
+highestStoreIndex = i;
+}
+}
+// DISPLAY REPORT
+// ==========================================
+System.out.println();
+System.out.println("===================================================");
+System.out.println(" Gaming Console REPORT");
+System.out.println("===================================================");
+System.out.printf("%-12s %-12s %-12s%n",
+"PS5",
+"Xbox",
+"SWITCH",
+"TOTAL");
+// Display sales for each store in the cicty
+for (int i = 0; i < stores.length; i++) {
+System.out.printf("-12.0f %-12.0f %-12.0f %-12.0f%n",
+city[i],
+sales[i][0],
+sales[i][1],
+sales[i][2],
+storeTotals[i]);
+}
+System.out.println("---------------------------------------------------");
+// Display device totals
+System.out.printf("   ",
+"Device TOTALS",
+deviceTotals[0],
+deviceTotals[1],
+deviceTotals[2]);
+System.out.println();
+// Grand total
+System.out.println("GRAND TOTAL SALES: "
+String.format("%.0f", grandTotal));
+// Highest store
+System.out.println("Ciity with the most sales: "
+stores[highestStoreIndex]
+" (" + String.format("%.0f",
+storeTotals[highestStoreIndex]) + ")");
+
+}
+    }
+    }
+}
